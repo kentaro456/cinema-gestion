@@ -1,0 +1,6 @@
+# Dépendances Python du projet (versions figées pour que toute l'équipe travaille à l'identique)
+Django==5.2.19
+python-dotenv==1.2.4
+
+# Optionnel : à installer uniquement si l'on passe à PostgreSQL
+# psycopg[binary]==3.2.9

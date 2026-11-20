@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block content %}
+  <div class="mb-4">
+    <h1 class="h3 mb-1">Tableau de bord</h1>
+    <p class="text-muted mb-0">Bienvenue{% if user.first_name %}, {{ user.first_name }}{% endif %} ! Voici l'état des modules de l'application.</p>
+  </div>
+
+  <div class="row g-3 mb-4">
+    {% for module in modules %}
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-muted mb-2">{{ module.nom }}</h2>
+            <p class="mb-3">{{ module.description }}</p>
+            <span class="badge text-bg-secondary">{{ module.statut }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="card shadow-sm border-0">
+    <div class="card-body">
+      <h2 class="h5">Prochaines étapes</h2>
+      <ul class="mb-0">
+        <li>Module <strong>Films &amp; Séances</strong> : ajout des films, programmation et contrôle des conflits d'horaires.</li>
+        <li>Module <strong>Billetterie</strong> : développé par un autre membre de l'équipe ; la structure est prête pour l'accueillir.</li>
+        <li>Consultation des ventes : tâche 4.5, à partir du modèle de données de la billetterie.</li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

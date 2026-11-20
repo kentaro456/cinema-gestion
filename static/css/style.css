@@ -1,0 +1,29 @@
+/* Styles communs du projet. Chaque module peut ajouter ses règles ici
+   ou dans son propre fichier static/<app>/... */
+
+:root {
+  --cinema-accent: #c0392b;
+}
+
+.navbar-brand {
+  letter-spacing: 0.02em;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--cinema-accent);
+  border-color: var(--cinema-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #a93226;
+  border-color: #a93226;
+}
+
+body {
+  font-size: 0.975rem;
+}
